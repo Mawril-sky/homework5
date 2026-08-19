@@ -63,16 +63,16 @@ public class Main {
         //Задание 5
         int monthNumber = 12;
         switch (monthNumber) {
-            case 1, 2, 3:
+            case 12, 1, 2:
                 System.out.println("Сейчас зима");
                 break;
-            case 4, 5, 6:
+            case 9, 10, 11
                 System.out.println("Сейчас осень");
                 break;
-            case 7, 8, 9:
+            case 6, 7, 8:
                 System.out.println("Сейчас лето");
                 break;
-            case 10,11,12:
+            case 3,4,5:
             System.out.println ("Сейчас весна");
             break;
             default:
