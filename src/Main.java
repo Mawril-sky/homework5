@@ -3,13 +3,11 @@
 public class Main {
     public static void main(String[] args) {
 //Задание 1
-        char clientOS = '1';
-        switch (clientOS) {
-            case '1':
-                System.out.println("Установите приложение для iOS по ссылке");
-                break;
-            default:
-                System.out.println("Установите версию приложения для Android по ссылке");
+        int clientOS = 1;
+        if (clientOS == 1) {
+            System.out.println("Установите приложение для iOS по ссылке");
+        } else if (clientOS == 0) {
+            System.out.println("Установите версию приложения для Android по ссылке");
         }
 
 // Задание 2
@@ -63,19 +61,22 @@ public class Main {
             System.out.println("Доставки нет.");
         }
         //Задание 5
-        char monthNumber = '7';
+        int monthNumber = 12;
         switch (monthNumber) {
-            case '1','2','3':
+            case 1, 2, 3:
                 System.out.println("Сейчас зима");
                 break;
-            case '4','5','6':
+            case 4, 5, 6:
                 System.out.println("Сейчас осень");
                 break;
-            case '7','8','9':
+            case 7, 8, 9:
                 System.out.println("Сейчас лето");
                 break;
+            case 10,11,12:
+            System.out.println ("Сейчас весна");
+            break;
             default:
-                System.out.println("Сейчас весна");
+                System.out.println("Нет такого месяца");
         }
     }
 }
