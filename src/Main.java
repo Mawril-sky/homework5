@@ -2,14 +2,82 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+//Задание 1
+        char clientOS = '1';
+        switch (clientOS) {
+            case '1':
+                System.out.println("Установите приложение для iOS по ссылке");
+                break;
+            default:
+                System.out.println("Установите версию приложения для Android по ссылке");
+        }
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
+// Задание 2
+        int clientDeviceYear = 2015;
+        switch (clientOS) {
+            case '1':
+                System.out.println("Установите приложение для iOS по ссылке");
+                if (clientDeviceYear < 2015) {
+                    System.out.println("Установите облегченную версию приложения для iOS по ссылке");
+                }
+                break;
+            default:
+                System.out.println("Установите версию приложения для Android по ссылке");
+                if (clientDeviceYear < 2015) {
+                    System.out.println("Установите облегченную версию приложения для Android по ссылке");
+                }
+        }
+        // Задание 3
+        int year = 2020; // сюда можно подставить любой год
+
+        boolean isLeap;
+
+        if (year % 400 == 0) {
+            isLeap = true;
+        } else if (year % 100 == 0) {
+            isLeap = false;
+        } else if (year % 4 == 0) {
+            isLeap = true;
+        } else {
+            isLeap = false;
+        }
+
+        if (isLeap) {
+            System.out.println(year + " год является високосным");
+        } else {
+            System.out.println(year + " год не является високосным");
+        }
+        //Задание 4
+        int deliveryDistance = 101;
+        char days;
+        if (deliveryDistance < 20) {
+            days = '1';
+            System.out.println("Потребуется дней: " + days);
+        } else if (deliveryDistance >= 20 && deliveryDistance < 60) {
+            days = '2';
+            System.out.println("Потребуется дней: " + days);
+        } else if (deliveryDistance >= 60 && deliveryDistance <= 100) {
+            days = '3';
+            System.out.println("Потребуется дней: " + days);
+        } else {
+            System.out.println("Доставки нет.");
+        }
+        //Задание 5
+        char monthNumber = '7';
+        switch (monthNumber) {
+            case '1','2','3':
+                System.out.println("Сейчас зима");
+                break;
+            case '4','5','6':
+                System.out.println("Сейчас осень");
+                break;
+            case '7','8','9':
+                System.out.println("Сейчас лето");
+                break;
+            default:
+                System.out.println("Сейчас весна");
         }
     }
 }
+
+
